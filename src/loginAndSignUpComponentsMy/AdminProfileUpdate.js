@@ -9,7 +9,7 @@ export default function AdminProfileUpdate() {
     const navigate=useNavigate();
 
     const fetchAdminById = async () => {
-            let response = await fetch(`http://localhost:8080/99acers/admin/profile/${adminId}`);
+            let response = await fetch(`http://realestate-vfkm.onrender.com/99acers/admin/profile/${adminId}`);
             let profileObject = await response.json();
             setProfile(profileObject);
             console.log(profileObject);
@@ -35,7 +35,7 @@ export default function AdminProfileUpdate() {
       return;
     }
         console.log(formData); 
-        let response = await fetch(`http://localhost:8080/99acers/admin/profile-update/${adminId}`,
+        let response = await fetch(`http://realestate-vfkm.onrender.com/99acers/admin/profile-update/${adminId}`,
             {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
