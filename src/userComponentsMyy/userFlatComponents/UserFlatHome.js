@@ -23,8 +23,8 @@ export default function UserFlatHome() {
   const SortBySize = async(size)=>
     {
       let url =  size=="all"?
-      `http://localhost:8080/99acres/flats`:
-      `http://localhost:8080/99acres/flats/sort/${size}`
+      `http://realestate-vfkm.onrender.com/99acres/flats`:
+      `http://realestate-vfkm.onrender.com/99acres/flats/sort/${size}`
   
       let response = await fetch(url)
       let flatObject= await response.json()
@@ -36,8 +36,8 @@ export default function UserFlatHome() {
     const FilterByPrice=async(filteringOrder)=>
       {
         let url = filteringOrder==='asc'? 
-        `http://localhost:8080/99acres/flats/filter/asc` : 
-        `http://localhost:8080/99acres/flats/filter/desc`
+        `http://realestate-vfkm.onrender.com/99acres/flats/filter/asc` : 
+        `http://realestate-vfkm.onrender.com/99acres/flats/filter/desc`
       
         let response =await fetch(url)
         let flatObject=await response.json()
