@@ -12,7 +12,7 @@ export default function AdminFlatUpdate() {
     let navigate = useNavigate();
 
     const fetchAllFlatsById = async () => {
-        let response = await fetch(`http://localhost:8080/99acres/flats/${id}`);
+        let response = await fetch(`http://realestate-vfkm.onrender.com/99acres/flats/${id}`);
         let flatObject = await response.json();
         setFlat(flatObject.data);
         
@@ -34,7 +34,7 @@ export default function AdminFlatUpdate() {
         formData.location = formData.location.toLowerCase().trim();
         formData.description = formData.description.toLowerCase().trim();
         // console.log(formData);
-        let response = await fetch(`http://localhost:8080/99acres/flats/${id}`,
+        let response = await fetch(`http://realestate-vfkm.onrender.com/99acres/flats/${id}`,
             {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
