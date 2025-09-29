@@ -10,7 +10,7 @@ import UserFlats from './UserFlats';
 export default function UserFlatHome() {
   let[flats,setflat]=useState(null)
   let [searchLocation, setSearchLocation]=useState(null)
-
+  console.log("hello");
   const fetchAllFlats= async()=>
     {
         let response = await fetch("https://realestate-vfkm.onrender.com/99acres/flats")
