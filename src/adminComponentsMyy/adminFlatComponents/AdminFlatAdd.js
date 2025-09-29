@@ -12,7 +12,7 @@ export default function AdminFlatAdd() {
     // Fetch profile data on component mount
     useEffect(() => {
       const fetchAllData = async () => {
-        let response = await fetch(`http://localhost:8080/99acers/admin/profile/${adminId}`);
+        let response = await fetch(`http://realestate-vfkm.onrender.com/99acers/admin/profile/${adminId}`);
         let profileObject = await response.json();
         setProfile(profileObject);  
       };
@@ -31,7 +31,7 @@ export default function AdminFlatAdd() {
             formData.mnumber = profile.mnumber;
         }
 
-        let response = await fetch("http://localhost:8080/99acres/flat", {
+        let response = await fetch("http://realestate-vfkm.onrender.com/99acres/flat", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(formData)
