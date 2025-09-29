@@ -13,7 +13,7 @@ export default function UserFlatHome() {
 
   const fetchAllFlats= async()=>
     {
-        let response = await fetch("http://localhost:8080/99acres/flats")
+        let response = await fetch("https://realestate-vfkm.onrender.com/99acres/flats")
         let flatObject=await response.json()
         setflat(flatObject.data)
         setSearchLocation(flatObject.data)
