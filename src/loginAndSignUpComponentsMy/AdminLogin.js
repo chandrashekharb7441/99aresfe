@@ -13,7 +13,7 @@ const AdminLogin = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8080/99acers/admin/login", {
+      const response = await fetch("http://realestate-vfkm.onrender.com/99acers/admin/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
