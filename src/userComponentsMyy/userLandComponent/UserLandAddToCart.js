@@ -14,7 +14,7 @@ export default function UserLandAddToCart() {
 
     // Fetch Flat Details by ID
     const fetchAllLandsById = async () => {
-        let response = await fetch(`http://localhost:8080/99acres/lands/${id}`);
+        let response = await fetch(`https://localhost:8080/99acres/lands/${id}`);
         let landObject = await response.json();
         setLand(landObject.data);
 
@@ -36,7 +36,7 @@ export default function UserLandAddToCart() {
         console.log("Form data submitted: ", formData);
 
         // Sending data to API (POST request)
-        let response = await fetch(`http://localhost:8080/99acers/cart`, {
+        let response = await fetch(`https://localhost:8080/99acers/cart`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
