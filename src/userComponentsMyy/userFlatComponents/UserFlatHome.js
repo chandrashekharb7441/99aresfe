@@ -36,8 +36,8 @@ export default function UserFlatHome() {
     const FilterByPrice=async(filteringOrder)=>
       {
         let url = filteringOrder==='asc'? 
-        `http://realestate-vfkm.onrender.com/99acres/flats/filter/asc` : 
-        `http://realestate-vfkm.onrender.com/99acres/flats/filter/desc`
+        `https://realestate-vfkm.onrender.com/99acres/flats/filter/asc` : 
+        `https://realestate-vfkm.onrender.com/99acres/flats/filter/desc`
       
         let response =await fetch(url)
         let flatObject=await response.json()
