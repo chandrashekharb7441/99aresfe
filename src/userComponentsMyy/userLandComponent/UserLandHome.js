@@ -14,7 +14,7 @@ export default function UserLandHome() {
 
   const fetchAllLands= async()=>
     {
-        let response = await fetch("http://localhost:8080/99acres/lands")
+        let response = await fetch("https://localhost:8080/99acres/lands")
         let landObject=await response.json()
         setland(landObject.data)
         setSearchLocation(landObject.data)
@@ -24,8 +24,8 @@ export default function UserLandHome() {
   const SortBySize = async(size)=>
     {
       let url =  size=="all"?
-      `http://localhost:8080/99acres/lands`:
-      `http://localhost:8080/99acres/lands/sort/${size}`
+      `https://localhost:8080/99acres/lands`:
+      `https://localhost:8080/99acres/lands/sort/${size}`
   
       let response = await fetch(url)
       let landObject= await response.json()
@@ -37,8 +37,8 @@ export default function UserLandHome() {
   const FilterByPrice=async(filteringOrder)=>
     {
       let url = filteringOrder==='asc'? 
-      `http://localhost:8080/99acres/lands/filter/asc` : 
-      `http://localhost:8080/99acres/lands/filter/desc`
+      `https://localhost:8080/99acres/lands/filter/asc` : 
+      `https://localhost:8080/99acres/lands/filter/desc`
     
       let response =await fetch(url)
       let landObject=await response.json()
