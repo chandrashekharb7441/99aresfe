@@ -8,7 +8,7 @@ export default function UserProfile() {
     const CartItems = localStorage.getItem("UserCartCount");
 
     const fetchAllData = async () => {
-        let response = await fetch(`http://realestate-vfkm.onrender.com/99acers/user/profile/${userId}`);
+        let response = await fetch(`https://realestate-vfkm.onrender.com/99acers/user/profile/${userId}`);
         let profileObject = await response.json();
         setProfile(profileObject);
     };
