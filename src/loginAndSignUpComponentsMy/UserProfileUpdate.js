@@ -9,7 +9,7 @@ export default function UserProfileUpdate() {
     const navigate=useNavigate();
 
     const fetchUserById = async () => {
-            let response = await fetch(`http://realestate-vfkm.onrender.com/99acers/user/profile/${userId}`);
+            let response = await fetch(`https://realestate-vfkm.onrender.com/99acers/user/profile/${userId}`);
             let profileObject = await response.json();
             setProfile(profileObject);
             console.log(profileObject);
@@ -35,7 +35,7 @@ export default function UserProfileUpdate() {
       return;
     }
         console.log(formData); 
-        let response = await fetch(`http://realestate-vfkm.onrender.com/99acers/user/profile-update/${userId}`,
+        let response = await fetch(`https://realestate-vfkm.onrender.com/99acers/user/profile-update/${userId}`,
             {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
