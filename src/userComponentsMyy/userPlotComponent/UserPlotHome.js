@@ -12,7 +12,7 @@ export default function UserPlotHome() {
 
   const fetchAllPlots= async()=>
     {
-        let response = await fetch("http://realestate-vfkm.onrender.com/99acres/plots")
+        let response = await fetch("https://realestate-vfkm.onrender.com/99acres/plots")
         let plotObject=await response.json()
         setplot(plotObject.data)
         setSearchLocation(plotObject.data)
@@ -22,8 +22,8 @@ export default function UserPlotHome() {
   const SortBySize = async(size)=>
     {
       let url =  size=="all"?
-      `http://realestate-vfkm.onrender.com/99acres/plots`:
-      `http://realestate-vfkm.onrender.com/99acres/plots/sort/${size}`
+      `https://realestate-vfkm.onrender.com/99acres/plots`:
+      `https://realestate-vfkm.onrender.com/99acres/plots/sort/${size}`
   
       let response = await fetch(url)
       let plotObject= await response.json()
@@ -35,8 +35,8 @@ export default function UserPlotHome() {
     const FilterByPrice=async(filteringOrder)=>
       {
         let url = filteringOrder==='asc'? 
-        `http://realestate-vfkm.onrender.com/99acres/plots/filter/asc` : 
-        `http://realestate-vfkm.onrender.com/99acres/plots/filter/desc`
+        `https://realestate-vfkm.onrender.com/99acres/plots/filter/asc` : 
+        `https://realestate-vfkm.onrender.com/99acres/plots/filter/desc`
       
         let response =await fetch(url)
         let plotObject=await response.json()
