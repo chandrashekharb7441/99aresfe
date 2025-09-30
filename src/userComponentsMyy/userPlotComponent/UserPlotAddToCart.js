@@ -14,7 +14,7 @@ export default function UserPlotAddToCart() {
 
     // Fetch Flat Details by ID
     const fetchAllPlotsById = async () => {
-        let response = await fetch(`http://localhost:8080/99acres/plots/${id}`);
+        let response = await fetch(`http://realestate-vfkm.onrender.com/99acres/plots/${id}`);
         let plotObject = await response.json();
         setPlot(plotObject.data);
 
@@ -36,7 +36,7 @@ export default function UserPlotAddToCart() {
         console.log("Form data submitted: ", formData);
 
         // Sending data to API (POST request)
-        let response = await fetch(`http://localhost:8080/99acers/cart`, {
+        let response = await fetch(`http://realestate-vfkm.onrender.com/99acers/cart`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
