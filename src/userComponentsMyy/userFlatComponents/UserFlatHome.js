@@ -23,8 +23,8 @@ export default function UserFlatHome() {
   const SortBySize = async(size)=>
     {
       let url =  size=="all"?
-      `http://realestate-vfkm.onrender.com/99acres/flats`:
-      `http://realestate-vfkm.onrender.com/99acres/flats/sort/${size}`
+      `https://realestate-vfkm.onrender.com/99acres/flats`:
+      `https://realestate-vfkm.onrender.com/99acres/flats/sort/${size}`
   
       let response = await fetch(url)
       let flatObject= await response.json()
