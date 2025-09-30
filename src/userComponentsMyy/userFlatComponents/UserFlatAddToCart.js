@@ -14,7 +14,7 @@ export default function UserFlatAddToCart() {
 
     // Fetch Flat Details by ID
     const fetchAllFlatsById = async () => {
-        let response = await fetch(`http://realestate-vfkm.onrender.com/99acres/flats/${id}`);
+        let response = await fetch(`https://realestate-vfkm.onrender.com/99acres/flats/${id}`);
         let flatObject = await response.json();
         setFlat(flatObject.data);
 
@@ -36,7 +36,7 @@ export default function UserFlatAddToCart() {
         console.log("Form data submitted: ", formData);
 
         // Sending data to API (POST request)
-        let response = await fetch(`http://realestate-vfkm.onrender.com/99acers/cart`, {
+        let response = await fetch(`https://realestate-vfkm.onrender.com/99acers/cart`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
