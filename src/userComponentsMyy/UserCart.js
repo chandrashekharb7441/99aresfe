@@ -7,7 +7,7 @@ export default function UserFlatCarts() {
   const userId = localStorage.getItem("userId"); 
 
   const fetchAllFlats = async () => {
-    let response = await fetch(`http://realestate-vfkm.onrender.com/99acers/cart/user/${userId}`)
+    let response = await fetch(`https://realestate-vfkm.onrender.com/99acers/cart/user/${userId}`)
     let flatObject = await response.json()
     setFlat(flatObject.data || [])  // Set to empty array if no data
     console.log(flatObject.data);
@@ -21,7 +21,7 @@ export default function UserFlatCarts() {
   
 
   const deleteItemById = async (id) => {
-    let response = await fetch(`http://realestate-vfkm.onrender.com/99acers/cart/${id}`, { method: "DELETE" })
+    let response = await fetch(`https://realestate-vfkm.onrender.com/99acers/cart/${id}`, { method: "DELETE" })
     let flatObject = await response.json()
     console.log(flatObject);
     setIsDeleted(isDeleted + 1)
