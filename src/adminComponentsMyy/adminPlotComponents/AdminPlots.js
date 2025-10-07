@@ -8,7 +8,7 @@ export default function AdminPlots() {
       
   const fetchAllPlots= async()=>
   {
-      let response = await fetch(`http://realestate-vfkm.onrender.com/99acres/plots/admin/${adminId}`)
+      let response = await fetch(`https://realestate-vfkm.onrender.com/99acres/plots/admin/${adminId}`)
       let plotObject=await response.json()
       setplots(plotObject.data)
       // console.log(plotObject.data); 
@@ -20,7 +20,7 @@ export default function AdminPlots() {
   }
   const deletePlotById=async(id) =>
   {
-      let response =await fetch(`http://realestate-vfkm.onrender.com/99acres/plot/${id}`,{method:"DELETE"})
+      let response =await fetch(`https://realestate-vfkm.onrender.com/99acres/plot/${id}`,{method:"DELETE"})
       let plotObject=await response.json()
       // console.log(plotObject);
       setIsDeleted(isDeleted+1)
