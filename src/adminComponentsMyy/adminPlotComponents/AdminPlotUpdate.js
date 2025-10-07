@@ -11,7 +11,7 @@ export default function AdminPlotUpdate() {
     const adminId = localStorage.getItem("adminId");
 
     const fetchAllPlotsById = async () => {
-        let response = await fetch(`http://realestate-vfkm.onrender.com/99acres/plots/${id}`);
+        let response = await fetch(`https://realestate-vfkm.onrender.com/99acres/plots/${id}`);
         let plotObject = await response.json();
         setPlot(plotObject.data);
         
@@ -32,7 +32,7 @@ export default function AdminPlotUpdate() {
         formData.location = formData.location.toLowerCase().trim();
         formData.description = formData.description.toLowerCase().trim();
         
-        let response = await fetch(`http://realestate-vfkm.onrender.com/99acres/plots/${id}`,
+        let response = await fetch(`https://realestate-vfkm.onrender.com/99acres/plots/${id}`,
             {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
