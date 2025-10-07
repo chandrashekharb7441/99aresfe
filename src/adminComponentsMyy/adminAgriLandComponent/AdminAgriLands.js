@@ -8,7 +8,7 @@ export default function AdminAgriLands() {
 
   const fetchAllLands= async()=>
     {
-        let response = await fetch(`http://realestate-vfkm.onrender.com/99acres/lands/admin/${adminId}`)
+        let response = await fetch(`https://realestate-vfkm.onrender.com/99acres/lands/admin/${adminId}`)
         let landObject=await response.json()
         setland(landObject.data)
         console.log(landObject); 
@@ -20,7 +20,7 @@ export default function AdminAgriLands() {
     }
   const deleteLandById=async(id) =>
     {
-      let response =await fetch(`http://realestate-vfkm.onrender.com/99acres/land/${id}`,{method:"DELETE"})
+      let response =await fetch(`https://realestate-vfkm.onrender.com/99acres/land/${id}`,{method:"DELETE"})
       let landObject=await response.json()
       console.log(landObject);
       setIsDeleted(isDeleted+1)
