@@ -7,7 +7,7 @@ export default function AdminFlats() {
   const adminId = localStorage.getItem("adminId");
 
   const fetchAllFlats = async () => {
-    let response = await fetch(`http://realestate-vfkm.onrender.com/99acres/flats/admin/${adminId}`)
+    let response = await fetch(`https://realestate-vfkm.onrender.com/99acres/flats/admin/${adminId}`)
     let flatObject = await response.json()
     setflat(flatObject.data)
     // console.log(flatObject.data); 
@@ -19,7 +19,7 @@ export default function AdminFlats() {
   }
 
   const deleteFlatById = async (id) => {
-    let response = await fetch(`http://realestate-vfkm.onrender.com/99acres/flats/${id}`, { method: "DELETE" })
+    let response = await fetch(`https://realestate-vfkm.onrender.com/99acres/flats/${id}`, { method: "DELETE" })
     let flatObject = await response.json()
     // console.log(flatObject);
     setIsDeleted(isDeleted + 1)
