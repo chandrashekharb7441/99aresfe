@@ -10,7 +10,7 @@ export default function AdminPlotAdd() {
 
     useEffect(() => {
           const fetchAllData = async () => {
-            let response = await fetch(`http://realestate-vfkm.onrender.com/99acers/admin/profile/${adminId}`);
+            let response = await fetch(`https://realestate-vfkm.onrender.com/99acers/admin/profile/${adminId}`);
             let profileObject = await response.json();
             setProfile(profileObject);  
           };
@@ -26,7 +26,7 @@ export default function AdminPlotAdd() {
             formData.mnumber = profile.mnumber;
         }
 
-        let response = await fetch("http://realestate-vfkm.onrender.com/99acres/plot",
+        let response = await fetch("https://realestate-vfkm.onrender.com/99acres/plot",
                                 {
                                     method:"POST",
                                     headers:{"Content-Type":"application/json"},
