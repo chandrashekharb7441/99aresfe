@@ -20,7 +20,7 @@ const AdminRegister = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("https://realestate-vfkm.onrender.com/99acres/admin/register", {
+      const response = await fetch("https://realestate-vfkm.onrender.com/99acers/admin/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
