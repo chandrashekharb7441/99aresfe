@@ -11,7 +11,7 @@ export default function AdminLandUpdate() {
     const adminId = localStorage.getItem("adminId");
 
     const fetchAllLandById = async () => {
-        let response = await fetch(`http://realestate-vfkm.onrender.com/99acres/lands/${id}`);
+        let response = await fetch(`https://realestate-vfkm.onrender.com/99acres/lands/${id}`);
         let landObject = await response.json();
         setLand(landObject.data);
         
@@ -31,7 +31,7 @@ export default function AdminLandUpdate() {
     const submitForm = async (formData) => {
         formData.location = formData.location.toLowerCase().trim();
         formData.description = formData.description.toLowerCase().trim();
-        let response = await fetch(`http://realestate-vfkm.onrender.com/99acres/lands/${id}`,
+        let response = await fetch(`https://realestate-vfkm.onrender.com/99acres/lands/${id}`,
             {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
